@@ -1,0 +1,50 @@
+BI - Business Intelligence
+- Business Analytics / Data Analysis / Data Visualization
+Methods of BI
+- Data Mining
+- Reporting
+- Data Analysis
+- Data Visualization
+- Descriptive Analysis
+- Data Preparation
+Power BI - Business Intelligence Tool
+What is Power BI ?
+- Business Intelligence Tool
+Types of Power BI Tools
+- Desktop
+- Service Based - SaaS - Software as a Service
+- Mobile PowerBI
+
+Why we need Power BI ?
+- Easy ETL
+- Built-in Dashboards and reports
+- Multiple tiles on a single page
+-  Easy Publish Dashboards to Cloud
+
+Key Terms of PowerBI
+- Dataset 
+   - different sources of Power BI - Excel / CSV / DB in premises / DB in Cloud / JSON...
+- Visualization
+  - column / clustered / scatter / line / KPI / Gauge /...
+- Dashboards
+  - Collection of Visualization
+- Reports
+  - multiple pages of Visualization
+- Tiles
+  - single visualization
+
+Architecture of Power BI
+
+Power BI Components
+- Power Query - access, search or transform some public data or on-premises data
+- Power Pivot - used for data modeling for in-memory analytics
+- Power View - visulization of data
+- Power Map - geographical visualization
+- Power BI Service - share dashboards / reports to cloud
+- Power BI Q&A - Natual Language Query
+- Data Management Gateway - view data feeds, expose tables
+- Data Catalog - it allows you to discover and reuse queries
+
+
+
+
