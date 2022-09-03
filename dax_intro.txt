@@ -1,0 +1,25 @@
+Data Analyst - insight of data
+
+DAX - Data Analysis Expression
+- formula expression language
+- functional language
+   - math / string / aggregate / date and time...
+
+DAX
+- it contains 2 data types
+  - Numeric (int, decimal, currency) and Other (string or binary)
+
+Why DAX ?
+- Growth of products over a period of time
+
+Syntax :
+new_col_name = FUNCTION(Data[Col])
+TotalSales =  SUM(data["Sales"])
+
+- Calculated Tables : create additional table based on some formula
+- Calculated Columns : create a new column based on some formula using or without using any aggregate function
+- Measures : calculations will add a summary or aggregated measure to a table
+
+
+
+
