@@ -20,6 +20,22 @@ TotalSales =  SUM(data["Sales"])
 - Calculated Columns : create a new column based on some formula using or without using any aggregate function
 - Measures : calculations will add a summary or aggregated measure to a table
 
+===========================================
+Aggregated Functions
+- SUM, AVG, MIN, MAX, COUNT, PRODUCT
+- VARIANCE, STANDARD DEVIATION
+
+RandomSelection = 
+VAR SampleSize = 500
+VAR TableWithRandom = ADDCOLUMNS(Data, "RandomCol", RAND())
+RETURN
+    TOPN(SampleSize, TableWithRandom, [RandomCol])
+
+
+
+
+
+
 
 
 
