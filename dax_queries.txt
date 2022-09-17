@@ -1,0 +1,4 @@
+LastYear = CALCULATE(SUM(Sunspots[Monthly Mean Total Sunspot Number]), PARALLELPERIOD(Sunspots[Date],-1,year))
+
+LastYear = CALCULATE(SUM(ResellerSales_USD[SalesAmount_USD]), SAMEPERIODLASTYEAR(DateTime[DateKey]))
+
