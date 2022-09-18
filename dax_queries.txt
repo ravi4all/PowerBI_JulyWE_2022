@@ -2,3 +2,42 @@ LastYear = CALCULATE(SUM(Sunspots[Monthly Mean Total Sunspot Number]), PARALLELP
 
 LastYear = CALCULATE(SUM(ResellerSales_USD[SalesAmount_USD]), SAMEPERIODLASTYEAR(DateTime[DateKey]))
 
+SAMEPERIODLASTYEAR = CALCULATE(Sunspots[TotalMean], SAMEPERIODLASTYEAR(Sunspots[Date]))
+
+---------------------------------------------------------------------------------------------------
+
+Total Sales YOY Growth % = 
+DIVIDE
+    (SUM(Data[Sales]) - 
+        CALCULATE(SUM(Data[Sales]),
+        PARALLELPERIOD(Data[Order Date], -12, MONTH)
+        ),
+        CALCULATE(SUM(Data[Sales]),
+        PARALLELPERIOD(Data[Order Date], -12, MONTH)
+        )
+    )
+
+---------------------------------------------------------------------------
+
+Total Sales YOY Growth % = 
+    VAR TotalSales = SUM(Data[Sales])
+    VAR TotalSalesPP = 
+        CALCULATE(TotalSales, 
+        PARALLELPERIOD(Data[Order Date], -12, MONTH)
+        )
+    RETURN
+    DIVIDE(TotalSales - TotalSalesPP, TotalSalesPP)
+
+---------------------------------------------------------------------------
+
+Month Over Month
+
+
+
+
+
+
+
+
+
+
