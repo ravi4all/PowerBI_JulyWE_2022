@@ -32,6 +32,56 @@ Total Sales YOY Growth % =
 
 Month Over Month
 
+- DatesInPeriod
+- DatesBetween
+- Index
+
+
+Date = CALENDAR(DATE(2010,01,01), DATE(2015, 12, 31))
+
+Last 12 Months = 
+CALCULATE([TotalSales], 
+    DATESINPERIOD(
+        'Date'[Date],
+        MAX('Date'[Date]), 
+        -12,
+        MONTH
+    )
+)
+
+
+
+Last 12 Months = 
+VAR TS = SUM(Data[Sales])
+VAR EndDate = MAX('Date'[Date])
+VAR StartDate = EDATE(EndDate, -12) + 1
+VAR Result = CALCULATE(TS,
+    DATESBETWEEN('Date'[Date], StartDate, EndDate)
+)
+
+RETURN Result
+
+
+Last 12 Months = 
+VAR MaxDate = MAX('Date'[Date])
+VAR MinDate = EDATE(MaxDate, -12)
+VAR Resul = CALCULATE(
+    [TotalSales],
+    FILTER(ALL('Date'), 
+    'Date'[Date] <= MaxDate &&
+    'Date'[Date] > MinDate)
+)
+
+RETURN Result
+
+
+
+
+
+
+
+
+
 
 
 
