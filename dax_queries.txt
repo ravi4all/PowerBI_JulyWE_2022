@@ -76,11 +76,29 @@ RETURN Result
 
 
 
+momtest = 
+    VAR PYSALES =
+        CALCULATE([TOTAL_SALES_LY],DATEADD(ORDERDATE[Date],-1,month))
+    RETURN
+        DIVIDE(([total_sales])-PYSALES,PYSALES)
+TOTAL_SALES_LY = CALCULATE(SUM(Orders[Sales]),DATEADD(ORDERDATE[Date],-1,YEAR))
 
 
+Week Over Week
 
+WeekNum = WEEKNUM(Data[Order Date], 2)
+WeekDay = WEEKDAY(Data[Order Date],2)
 
-
+DifferenceWeek = 
+SUM ( Data[Sales] )
+    - CALCULATE (
+        SUM ( Data[Sales] ),
+        FILTER (
+            ALL ( Data ),
+            Data[Year] = MAX ( Data[Year] ) && Data[WeekNumber] = MAX( Data[WeekNumber] ) - 1 
+		&& Data[WeekDay] = MAX ( Data[WeekDay] )
+        )
+    )
 
 
 
