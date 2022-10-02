@@ -1,0 +1,39 @@
+Power BI Functions
+- Aggregate
+- Date and Time
+- Filter
+- String
+- Math
+- Statistics
+- Logical Functions
+  - IF, IFERROR, AND, OR, NOT, IN, SWITCH, TRUE, FALSE, BITAND, BITLSHIFT, BITRSHIFT...
+
+
+Using IF
+SalesPerformace = IF(Data1[Profit] > 10000, "Good", "Bad")
+
+Using Nested IF
+SalesPerformace = IF(Data1[Profit] < 1000, "Bad", 
+                  IF(Data1[Profit] > 10000, "Good", "Average"))
+
+Using AND
+SalesPerformace = IF(AND(Data1[Sales] > AVERAGE(Data1[Sales]),
+                    Data1[Profit] > AVERAGE(Data1[Profit])), 
+                    "Good", "Bad")
+
+Using OR
+SalesPerformace = IF(OR(Data1[Sales] > AVERAGE(Data1[Sales]),
+                    Data1[Profit] > AVERAGE(Data1[Profit])), 
+                    "Good", "Bad")
+
+
+Using NOT
+SalesPerformace = NOT(IF(Data1[Profit] < 10000, "TRUE", "FALSE"))
+
+Using IN
+SumSales = CALCULATE(SUM(Data1[Sales]), 
+           'Data1'[Country] IN {"China", "India", "France"})
+
+Using SWITCH
+SwitchRegion = SWITCH(Data1[Region],"Asia", 1, "Europe" , 2, 
+                "North America", 3)
