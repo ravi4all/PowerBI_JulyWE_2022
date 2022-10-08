@@ -1,0 +1,14 @@
+Question for covid_19 data
+- How many confimed cases India has registered ?
+- In which state of India number of deaths are maximum ?
+- Which country in world registered most recovered cases ?
+- Plot Gauge for confirmed vs recovered cases
+- Plot KPI for all death cases
+
+Question for madedata
+1. Which symptoms are having most impact on covid patients ?
+2. Which age range was having most confirmed cases ?
+3. Based on gender what is the impact of contact_with_covid_patient ?
+4. Among all symptoms which symptom has min impact ?
+
+
